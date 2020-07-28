@@ -13,9 +13,8 @@
 		   <a href="#Trips">Travelog </a> 
 		    <!-- <a href="" >Futur project</a> |
 			<a href="" >Stay in touch </a> -->
-		
 		</nav>
-		<h1><div class="Banner"> <img alt="Where the sun rise" src="./pictures/header.png" height="350px" width="1000px"/></div></h1>
+		<h1><div class="Banner" onmouseover="banner(this)" onmouseout="bannerReverse(this)"> <img alt="Where the sun rise" src="./pictures/header.png" height="350px" width="1000px"/></div></h1>
 	</header>
 	<!-- Main information-->
 	<main>
@@ -32,9 +31,9 @@
 		<p align="right">ฅ^•ﻌ•^ฅ</p></p>
 		</main>
 	<div id="Trips">
-		<div class="box tokyo"> <a href="Tokyo.html">Tōkyō </a></div>
-		<div class="box hiroshima"> <a href="Hiroshima.html">Hiroshima </a></div>
-		<div class="box kyushu"> <a href="Kyushu.html">Kyūshū  </a></div>
+		<div class="box tokyo" onmouseover="box(this)" onmouseout="boxReverse(this)"> <a href="Tokyo.html">Tōkyō </a></div>
+		<div class="box hiroshima" onmouseover="box(this)" onmouseout="boxReverse(this)"> <a href="Hiroshima.html">Hiroshima </a></div>
+		<div class="box kyushu" onmouseover="box(this)" onmouseout="boxReverse(this)"> <a href="Kyushu.html">Kyūshū  </a></div>
 	</div>
 	<div id="bottom">
 	<p>Gallery Pictures<p>
@@ -50,7 +49,20 @@
 	<a href="https://www.twitch.tv/" target="_blank" ><img alt="twitch" src="./pictures/twitch.png"width="50px" height="50px"/></a>
 	
 	<!-- icones provided by iconmonstr.com -->
-	
-</footer>
+</footer>  
+<script type="text/javascript">
+	function banner(elmt) {
+		elmt.style.opacity = 0.5;
+	}
+	function bannerReverse(elmt) {
+		elmt.style.opacity = 1;
+	}
+	function box(elmt) {
+			elmt.style.transform = "rotate(20deg)"
+	}
+	function boxReverse(elmt) {
+			elmt.style.transform = "rotate(0deg)"
+	}
+</script>
 </body>
 </html>
